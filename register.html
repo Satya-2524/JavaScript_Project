@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e42847, #5993f7);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .register-container {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border 0.3s ease;
+    }
+
+    .form-group input:focus {
+      border-color: #2575fc;
+      outline: none;
+    }
+
+    .form-group input:hover {
+      border-color: #6a11cb;
+    }
+
+    .register-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #ee4b4b;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 16px;
+    }
+
+    .register-btn:hover {
+      background-color: #f86287;
+    }
+    .guest-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff416c;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 16px;
+    }
+
+    .login-btn:hover,
+    .guest-btn:hover {
+      background-color: #ff4b2b;
+    }
+
+    .guest-btn {
+      margin-top: 12px; 
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #2575fc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .login-link a:hover {
+      color: #6a11cb;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Create Account</h2>
+    <form action="/register" method="post" id="registerForm">
+      <div class="form-group">
+        <label for="username"><i class="fas fa-user"></i>Username</label>
+        <input 
+          type="text" 
+          id="username" 
+          name="username" 
+          required 
+          autocomplete="username" placeholder="Enter Username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email"> <i class="fas fa-envelope"></i>Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          autocomplete="email" placeholder="Enter Email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i>Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          required 
+          autocomplete="new-password" placeholder="Enter Password"
+        />
+      </div>
+
+      <button type="submit" class="register-btn">Sign Up</button>
+      <a href="./recipe.html"><button type="button" class="guest-btn"> <i class="fas fa-user" style="margin-right: 8px;"></i>Continue as Guest</button></a>
+
+      <div class="login-link">
+        Already have an account? <a href="./login.html">Login here</a>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="./register.js" defer></script>
+</body>
+</html>
